@@ -118,14 +118,3 @@ If you prefer using a local Pygame front end for drawing digits:
 The chosen Convolutional Neural Network (CNN) architecture is well-suited for image recognition tasks due to its ability to capture spatial hierarchies in images. Convolutional layers help in detecting features like edges, corners, and textures, while pooling layers reduce dimensionality and computation. Fully connected layers at the end combine these features to predict the digit.
 
 The architecture is simple yet effective for the MNIST dataset, providing a good balance between complexity and performance. The model can be further tuned and improved with additional layers or hyperparameter adjustments.
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
-
-This `README.md` file provides a comprehensive overview of the project, including the neural network architecture, setup instructions, and usage guidelines. Let me know if you need any further adjustments or additional information!

@@ -34,6 +34,13 @@ class Recognizer():
     def guess(self, img_path):
         img = cv.imread(img_path, cv.IMREAD_GRAYSCALE)
         img = self.preprocess_image(img)
+        
+        # Save the preprocessed image for inspection
+        save_path = os.path.join(os.getcwd(), 'preprocessed_image.png')
+        cv.imwrite(save_path, img)
+        print(f"Preprocessed image saved as '{save_path}'")
+
+        # Invert the image and normalize
         img = np.invert(np.array([img])) / 255.0
 
         print(f"Image shape after inversion: {img.shape}")
@@ -42,6 +49,7 @@ class Recognizer():
             print("Error: Image shape is incorrect. Expected (1, 28, 28)")
             return None
 
+        # Make prediction
         prediction = self.model.predict(img)
 
         if prediction is None:
